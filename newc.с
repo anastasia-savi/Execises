@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    // Объявление массива из 4 int-ов
+    int myArray[4] = {1, 2, 3, 4}; // Задайте значения по вашему усмотрению
+
+    // Открытие файла для записи
+    FILE *file = fopen("myArray.txt", "w");
+
+    // Проверка, удалось ли открыть файл
+    if (file == NULL) {
+        fprintf(stderr, "Ошибка открытия файла.\n");
+        return 1;
+    }
+
+    // Запись массива в файл
+    for (int i = 0; i < 4; ++i) {
+        fprintf(file, "%d\n", myArray[i]);
+    }
+
+    // Закрытие файла
+    fclose(file);
+
+    printf("Массив успешно сохранен в файл 'myArray.txt'.\n");
+    return 0;
+}
