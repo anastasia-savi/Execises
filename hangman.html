@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+
+    <form class="form">
+      <label for="entlet">Enter 1 letter: </label>
+      <input
+        type="text"
+        id="entlet"
+        name="name"
+        required
+        minlength="1"
+        maxlength="1"
+        size="3"
+      />
+      <button type="button" id="guessBtn">Guess</button>
+    </form>
+    <p id="progress"></p>
+    <p id="message"></p>
+    <script src="./hangman.js"></script>
+  </body>
+</html>
