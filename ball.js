@@ -1,6 +1,6 @@
 let Ball = function () {
-  this.x = 100;
-  this.y = 100;
+  this.x = width/2;
+  this.y = height/2;
   this.xSpeed = Math.floor(Math.random() * -5);
   this.ySpeed = Math.floor(Math.random() * 5);
   this.color = chooseColor();
